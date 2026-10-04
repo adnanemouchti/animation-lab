@@ -1,0 +1,609 @@
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+    --background: #10131a;
+    --card: #181c25;
+    --demo: #0c0f14;
+
+    --blue: #315efb;
+    --purple: #9b51e0;
+
+    --text: #ffffff;
+    --secondary: #b8bdc9;
+    --muted: #777d8a;
+
+    --border: #292e39;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.hero {
+    min-height: 55vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #20263a 0%,
+            var(--background) 55%
+        );
+}
+
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.subtitle {
+    color: var(--blue);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 80px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--purple)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero-description {
+    color: var(--secondary);
+
+    font-size: 18px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   ANIMATION SECTION
+======================================== */
+
+.animation-section {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.section-title span {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--purple)
+    );
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+    font-size: 30px;
+}
+
+
+/* ========================================
+   CODE + DEMO LAYOUT
+======================================== */
+
+.animation-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   CODE CONTAINER
+======================================== */
+
+.code-container {
+    background: #0b0d12;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.code-header,
+.demo-header {
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #131720;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.code-dot {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--purple);
+}
+
+
+pre {
+    padding: 25px;
+
+    min-height: 280px;
+
+    overflow-x: auto;
+}
+
+
+code {
+    color: #d9deea;
+
+    font-family: Consolas, monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   DEMO CONTAINER
+======================================== */
+
+.demo-container {
+    background: var(--demo);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.demo {
+    height: 280px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   01 — TRANSITION
+======================================== */
+
+.transition-button {
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+
+.transition-button:hover {
+    background: var(--purple);
+
+    transform: scale(1.1);
+}
+
+
+/* ========================================
+   02 — TRANSFORM
+======================================== */
+
+.transform-box {
+    width: 120px;
+
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--purple)
+    );
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    transition: 0.5s;
+}
+
+
+.transform-box:hover {
+    transform:
+        rotate(15deg)
+        scale(1.2);
+}
+
+
+/* ========================================
+   03 — LOADING LINE
+======================================== */
+
+.loading-demo {
+    padding: 0 35px;
+}
+
+
+.loading-line {
+    position: absolute;
+
+    left: 8%;
+
+    right: 8%;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: #292e39;
+}
+
+
+.loading-ball {
+    position: absolute;
+
+    left: 8%;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow:
+        0 0 15px rgba(49, 94, 251, 0.8);
+
+    animation:
+        loading 3s
+        infinite
+        linear;
+}
+
+
+@keyframes loading {
+
+    0% {
+        left: 8%;
+    }
+
+    70% {
+        left: 88%;
+    }
+
+    100% {
+        left: 8%;
+    }
+}
+
+
+/* ========================================
+   04 — ZIG-ZAG BALL
+======================================== */
+
+.zigzag-ball {
+    position: absolute;
+
+    left: 3%;
+
+    top: 10%;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: var(--purple);
+
+    box-shadow:
+        0 0 18px rgba(155, 81, 224, 0.9);
+
+    animation:
+        zigzag 5s
+        infinite
+        linear;
+}
+
+
+@keyframes zigzag {
+
+    0% {
+        left: 3%;
+        top: 10%;
+    }
+
+    20% {
+        left: 90%;
+        top: 10%;
+    }
+
+    40% {
+        left: 15%;
+        top: 35%;
+    }
+
+    60% {
+        left: 85%;
+        top: 55%;
+    }
+
+    80% {
+        left: 10%;
+        top: 85%;
+    }
+
+    100% {
+        left: 90%;
+        top: 85%;
+    }
+}
+
+
+/* ========================================
+   05 — FLOATING ELEMENT
+======================================== */
+
+.floating {
+    font-size: 80px;
+
+    color: var(--blue);
+
+    text-shadow:
+        0 0 25px rgba(49, 94, 251, 0.8);
+
+    animation:
+        floating 2s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   EXPLANATION
+======================================== */
+
+.explanation {
+    margin-top: 25px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.explanation h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+
+.explanation p {
+    color: var(--secondary);
+
+    max-width: 950px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    padding: 35px;
+
+    color: var(--muted);
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 850px) {
+
+    .animation-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .animation-section {
+        padding: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Animation Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">C.4 — CRÉER DES ANIMATIONS</p>
+
+            <h1>CSS Animation Lab</h1>
+
+            <p class="hero-description">
+                Découvrez comment utiliser CSS pour créer des
+                transitions, des transformations et des animations.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================
+             01 — TRANSITION
+        ========================== -->
+
+        <section class="animation-section">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>Transition</h2>
+            </div>
+
+            <div class="animation-content">
+
+                <!-- CODE -->
+
+                <div class="code-container">
+
+                    <div class="code-header">
+                        <span>CODE CSS</span>
+                        <span class="code-dot"></span>
+                    </div>
+
+                    <pre><code>.transition-button {
+    background: #315efb;
+    transition: 0.5s;
+}
+
+.transition-button:hover {
+    background: #9b51e0;
+    transform: scale(1.1);
+}</code></pre>
+
+                </div>
+
+
+                <!-- DEMO -->
+
+                <div class="demo-container">
+
+                    <div class="demo-header">
+                        <span>RÉSULTAT</span>
+                    </div>
+
+                    <div class="demo transition-demo">
+
+                        <button class="transition-button">
+                            SURVOLEZ-MOI
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+
+            <div class="explanation">
+
+                <h3>Comment ça fonctionne ?</h3>
+
+                <p>
+                    La propriété <strong>transition</strong> permet de rendre
+                    un changement progressif. Lorsque l'utilisateur passe
+                    la souris sur le bouton, sa couleur change et sa taille
+                    augmente progressivement pendant 0,5 seconde.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             02 — TRANSFORMATION
+        ========================== -->
+
+        <section class="animation-section">
+
+            <div class="section-title">
+                <span>02</span>
+                <h2>Transformation</h2>
+            </div>
+
+            <div class="animation-content">
+
+                <!-- CODE -->
+
+                <div class="code-container">
+
+                    <div class="code-header">
+                        <span>CODE CSS</span>
+                        <span class="code-dot"></span>
+                    </div>
+
+                    <pre><code>.transform-box {
+    transition: 0.5s;
+}
+
+.transform-box:hover {
+    transform:
+        rotate(15deg)
+        scale(1.2);
+}</code></pre>
+
+                </div>
+
+
+                <!-- DEMO -->
+
+                <div class="demo-container">
+
+                    <div class="demo-header">
+                        <span>RÉSULTAT</span>
+                    </div>
+
+                    <div class="demo transform-demo">
+
+                        <div class="transform-box">
+                            CSS
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+
+            <div class="explanation">
+
+                <h3>Comment ça fonctionne ?</h3>
+
+                <p>
+                    La propriété <strong>transform</strong> permet de modifier
+                    l'apparence ou la position d'un élément. Ici, nous
+                    utilisons <strong>rotate()</strong> pour faire tourner
+                    l'élément et <strong>scale()</strong> pour l'agrandir.
+                    La transition rend ces changements progressifs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             03 — LOADING LINE
+        ========================== -->
+
+        <section class="animation-section">
+
+            <div class="section-title">
+                <span>03</span>
+                <h2>Loading Line</h2>
+            </div>
+
+            <div class="animation-content">
+
+                <!-- CODE -->
+
+                <div class="code-container">
+
+                    <div class="code-header">
+                        <span>CODE CSS</span>
+                        <span class="code-dot"></span>
+                    </div>
+
+                    <pre><code>.loading-ball {
+    animation:
+        loading 3s
+        infinite
+        linear;
+}
+
+@keyframes loading {
+
+    0% {
+        left: 8%;
+    }
+
+    70% {
+        left: 88%;
+    }
+
+    100% {
+        left: 8%;
+    }
+}</code></pre>
+
+                </div>
+
+
+                <!-- DEMO -->
+
+                <div class="demo-container">
+
+                    <div class="demo-header">
+                        <span>RÉSULTAT</span>
+                    </div>
+
+                    <div class="demo loading-demo">
+
+                        <div class="loading-line"></div>
+
+                        <div class="loading-ball"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+
+            <div class="explanation">
+
+                <h3>Comment ça fonctionne ?</h3>
+
+                <p>
+                    Cette animation utilise des <strong>keyframes</strong>
+                    pour déplacer une balle sur une ligne horizontale.
+                    La balle avance progressivement vers la droite jusqu'à
+                    70% de l'animation, puis revient plus rapidement vers
+                    sa position initiale. L'animation se répète continuellement.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             04 — ZIG-ZAG BALL
+        ========================== -->
+
+        <section class="animation-section">
+
+            <div class="section-title">
+                <span>04</span>
+                <h2>Balle en Zig-Zag</h2>
+            </div>
+
+            <div class="animation-content">
+
+                <!-- CODE -->
+
+                <div class="code-container">
+
+                    <div class="code-header">
+                        <span>CODE CSS</span>
+                        <span class="code-dot"></span>
+                    </div>
+
+                    <pre><code>@keyframes zigzag {
+
+    0% {
+        left: 3%;
+        top: 10%;
+    }
+
+    20% {
+        left: 90%;
+        top: 10%;
+    }
+
+    40% {
+        left: 15%;
+        top: 35%;
+    }
+
+    60% {
+        left: 85%;
+        top: 55%;
+    }
+
+    80% {
+        left: 10%;
+        top: 85%;
+    }
+
+    100% {
+        left: 90%;
+        top: 85%;
+    }
+}</code></pre>
+
+                </div>
+
+
+                <!-- DEMO -->
+
+                <div class="demo-container">
+
+                    <div class="demo-header">
+                        <span>RÉSULTAT</span>
+                    </div>
+
+                    <div class="demo zigzag-demo">
+
+                        <div class="zigzag-ball"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+
+            <div class="explanation">
+
+                <h3>Comment ça fonctionne ?</h3>
+
+                <p>
+                    Les <strong>keyframes</strong> permettent de définir
+                    plusieurs positions pour la balle. Chaque pourcentage
+                    représente une étape de l'animation. La balle se déplace
+                    ainsi dans différentes directions et traverse toute la
+                    zone de démonstration en formant un mouvement en zig-zag.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             05 — FLOATING
+        ========================== -->
+
+        <section class="animation-section">
+
+            <div class="section-title">
+                <span>05</span>
+                <h2>Élément Flottant</h2>
+            </div>
+
+            <div class="animation-content">
+
+                <!-- CODE -->
+
+                <div class="code-container">
+
+                    <div class="code-header">
+                        <span>CODE CSS</span>
+                        <span class="code-dot"></span>
+                    </div>
+
+                    <pre><code>.floating {
+    animation:
+        floating 2s
+        infinite
+        ease-in-out;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}</code></pre>
+
+                </div>
+
+
+                <!-- DEMO -->
+
+                <div class="demo-container">
+
+                    <div class="demo-header">
+                        <span>RÉSULTAT</span>
+                    </div>
+
+                    <div class="demo floating-demo">
+
+                        <div class="floating">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLANATION -->
+
+            <div class="explanation">
+
+                <h3>Comment ça fonctionne ?</h3>
+
+                <p>
+                    Les keyframes définissent trois étapes : la position
+                    initiale à 0%, la position supérieure à 50% et le retour
+                    à la position initiale à 100%. L'animation se répète
+                    continuellement grâce à la valeur
+                    <strong>infinite</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            CSS Animation Lab — <C class="4">C.4</C>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
